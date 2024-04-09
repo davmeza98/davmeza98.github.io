@@ -465,6 +465,15 @@ body {
   #menu-icon {
     display: block;
   }
+  #menu-icon:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+    
+  }
+  .navbar.active {
+    display: block;
+    background-color: rgba(0, 0, 0, .6);   
+    
+  }
 
   .navbar {
     position: absolute;
@@ -472,14 +481,15 @@ body {
     left: 0;
     width: 100%;
     padding: 1rem 3%;
-    background: (var(--bg-color));
+    background: (var(--main-color));
     border-top: .1rem solid rgba(0, 0, 0, .2);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    transition: .5s ease-in;
     display: none;
   }
 
-  .navbar.active {
-    display: block;
+  .navbar a {
+    border: var(--main-color);
   }
 
   .navbar a {
