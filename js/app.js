@@ -5,7 +5,16 @@ let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
+
+    if (navbar.classList.contains('active')) {
+        navbar.style.transform = 'translateY(0)';
+        navbar.style.opacity = '1';
+    } else {
+        navbar.style.transform = 'translateY(-100%)';
+        navbar.style.opacity = '0';
+    }
 }
+
 /*==================== scroll sections active link ====================*/
 
 /*==================== sticky navbar ====================*/
